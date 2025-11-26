@@ -1,212 +1,480 @@
 <!DOCTYPE html>
 <html lang="uz">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mening Portfolio'm</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>Toshmamatov Anvarbek - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <p>Yuklanmoqda...</p>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Header va Navigatsiya -->
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <a href="#" class="logo">Portfolio</a>
-          <ul class="nav-links">
-            <li><a href="#home">Bosh sahifa</a></li>
-            <li><a href="#about">Men haqimda</a></li>
-            <li><a href="#portfolio">Ishlarim</a></li>
-            <li><a href="#contact">Aloqa</a></li>
-          </ul>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </div>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Anvarbek</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Bosh sahifa</a></li>
+                    <li><a href="#about">Men haqimda</a></li>
+                    <li><a href="#portfolio">Ishlarim</a></li>
+                    <li><a href="#contact">Aloqa</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="themeSwitch" class="theme-checkbox">
+                    <label for="themeSwitch" class="theme-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="theme-ball"></span>
+                    </label>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1>
-            Salom, men <span class="highlight">Toshmamatov Anvarbek</span>
-          </h1>
-          <p>Veb-dasturchi va Dizayner</p>
-          <p>
-            Men zamonaviy veb-saytlar va ilovalarni yaratishga ixtisoslashganman
-          </p>
-          <a href="#portfolio" class="btn">Ishlarimni ko'ring</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Salom, men <span class="highlight">Toshmamatov Anvarbek</span>
+                </h1>
+                <p class="profession">Veb-dasturchi va Dizayner</p>
+                <p class="description">
+                    Men zamonaviy veb-saytlar va ilovalarni yaratishga ixtisoslashganman
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Ishlarimni ko'ring</a>
+                    <a href="#contact" class="btn btn-secondary">Bog'lanish</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Loyihalar</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Yil Tajriba</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Xursand Mijozlar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-element element-1"><i class="fab fa-html5"></i></div>
+                    <div class="floating-element element-2"><i class="fab fa-css3-alt"></i></div>
+                    <div class="floating-element element-3"><i class="fab fa-js"></i></div>
+                    <div class="floating-element element-4"><i class="fab fa-react"></i></div>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-          <div class="image-placeholder">
-            <i class="fas fa-user"></i>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Men haqimda -->
     <section id="about" class="about">
-      <div class="container">
-        <h2>Men haqimda</h2>
-        <div class="about-content">
-          <div class="about-image">
-            <div class="avatar">
-              <i class="fas fa-user-tie"></i>
+        <div class="container">
+            <h2>Men haqimda</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="skills-chart">
+                        <div class="skill">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Ism: Toshmamatov Anvarbek</h3>
+                    <p><strong>Yo'nalish:</strong> Kompyuter Ilimlari va Dasturlash Texnalogiyalari</p>
+                    <p><strong>Qiziqishlar:</strong> Dasturlash, dizayn, fotografiya, kitob o'qish</p>
+                    <p><strong>Tajriba:</strong> 2 yillik veb-dasturlash tajribasi. HTML, CSS, JavaScript, React va Node.js texnologiyalarida ishlayman.</p>
+                    <p>Men yangi texnologiyalarni o'rganish va qiziqarli loyihalarda ishlashni yaxshi ko'raman. Har bir loyihada o'z imkoniyatlarimni oshirishga intilaman.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Kompyuter Ilimlari</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <span>Kod Sifati</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Dizayn</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Zamonaviy Texnologiyalar</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary">Bog'lanish</a>
+                    <a href="#" class="btn btn-secondary" id="downloadCV">
+                        <i class="fas fa-download"></i>
+                        CV Yuklab Olish
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="about-text">
-            <h3>Ism: Toshmamatov Anvarbek</h3>
-            <p><strong>Yo'nalish:</strong> Kompyuter Ilimlari va Dasturlash Texnalogiyalari</p>
-            <p>
-              <strong>Qiziqishlar:</strong> Dasturlash, dizayn, fotografiya,
-              kitob o'qish
-            </p>
-            <p>
-              <strong>Tajriba:</strong> 2 yillik veb-dasturlash tajribasi. HTML,
-              CSS, JavaScript, React va Node.js texnologiyalarida ishlayman.
-            </p>
-            <p>
-              Men yangi texnologiyalarni o'rganish va qiziqarli loyihalarda
-              ishlashni yaxshi ko'raman. Har bir loyihada o'z imkoniyatlarimni
-              oshirishga intilaman.
-            </p>
-            <a href="#contact" class="btn">Bog'lanish</a>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2>Mening Ishlarim</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <div class="portfolio-image">
-              <i class="fas fa-chart-line"></i>
+        <div class="container">
+            <h2>Mening Ishlarim</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Hammasi</button>
+                <button class="filter-btn" data-filter="web">Veb Saytlar</button>
+                <button class="filter-btn" data-filter="app">Ilovalar</button>
+                <button class="filter-btn" data-filter="design">Dizayn</button>
             </div>
-            <h3>Interaktiv forma</h3>
-            <p>Ma'lumotlarni vizuallashtirish uchun dashboard</p>
-                        <a href="https://html-jadval-todo.vercel.app/" target="_blank" class="btn1"><button>Ko'rish</button></a>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://html-jadval-todo.vercel.app/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Interaktiv forma</h3>
+                    <p>Ma'lumotlarni vizuallashtirish uchun dashboard</p>
+                    <a href="https://html-jadval-todo.vercel.app/" target="_blank" class="portfolio-btn">
+                        <span>Ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
-          </div>
-          <div class="portfolio-item">
-            <div class="portfolio-image">
-              <i class="fas fa-gamepad"></i>
-            </div>
-            <h3>HTML da multimedia</h3>
-            <p>JavaScript bilan yaratilgan interaktiv o'yinlar</p>
-                        <a href="https://web-dasturlash-nj24.vercel.app/" target="_blank" class="btn1"><button>Ko'rish</button></a>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://web-dasturlash-nj24.vercel.app/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>HTML da multimedia</h3>
+                    <p>JavaScript bilan yaratilgan interaktiv o'yinlar</p>
+                    <a href="https://web-dasturlash-nj24.vercel.app/" target="_blank" class="portfolio-btn">
+                        <span>Ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
-          </div>
-          <div class="portfolio-item">
-            <div class="portfolio-image">
-              <i class="fas fa-university"></i>
-            </div>
-            <h3>Turk tili Sayti</h3>
-            <p>Testlar yechish uchun veb-sayt</p>
-            <a href="https://turk-test-sandy.vercel.app/" target="_blank" class="btn1"><button>Ko'rish</button></a>
-          </div>
-          <div class="portfolio-item">
-            <div class="portfolio-image">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Interaktiv forma</h3>
-            <p>Ma'lumotlarni vizuallashtirish uchun dashboard</p>
-                        <a href="https://html-jadval-todo.vercel.app/" target="_blank" class="btn1"><button>Ko'rish</button></a>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <i class="fas fa-university"></i>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://turk-test-sandy.vercel.app/" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Turk tili Sayti</h3>
+                    <p>Testlar yechish uchun veb-sayt</p>
+                    <a href="https://turk-test-sandy.vercel.app/" target="_blank" class="portfolio-btn">
+                        <span>Ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
-          </div>
-          <div class="portfolio-item">
-            <div class="portfolio-image">
-              <i class="fas fa-gamepad"></i>
-            </div>
-            <h3>HTML da multimedia</h3>
-            <p>JavaScript bilan yaratilgan interaktiv o'yinlar</p>
-                        <a href="https://web-dasturlash-nj24.vercel.app/" target="_blank" class="btn1"><button>Ko'rish</button></a>
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <i class="fas fa-palette"></i>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>UI/UX Dizayn</h3>
+                    <p>Figma bilan yaratilgan interfeys dizaynlari</p>
+                    <a href="#" class="portfolio-btn">
+                        <span>Ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
-          </div>
-          <div class="portfolio-item">
-            <div class="portfolio-image">
-              <i class="fas fa-university"></i>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Mobil Ilova</h3>
+                    <p>React Native bilan yaratilgan mobil ilova</p>
+                    <a href="#" class="portfolio-btn">
+                        <span>Ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>E-commerce Sayt</h3>
+                    <p>Onlayn do'kon veb-sayti</p>
+                    <a href="#" class="portfolio-btn">
+                        <span>Ko'rish</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <h3>Turk tili Sayti</h3>
-            <p>Testlar yechish uchun veb-sayt</p>
-            <a href="https://turk-test-sandy.vercel.app/" target="_blank" class="btn1"><button>Ko'rish</button></a>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Aloqa -->
     <section id="contact" class="contact">
-      <div class="container">
-        <h2>Bog'lanish</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Aloqa ma'lumotlari</h3>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <p>anvarbek@example.com</p>
+        <div class="container">
+            <h2>Bog'lanish</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Aloqa ma'lumotlari</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>anvarbek@example.com</p>
+                            <span>Email Manzil</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>+998 90 123 45 67</p>
+                            <span>Telefon Raqam</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Termiz, O'zbekiston</p>
+                            <span>Manzil</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p>Dushanba - Juma</p>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ismingiz</label>
+                        <input type="text" id="name" name="name" required />
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Mavzu</label>
+                        <input type="text" id="subject" name="subject" required />
+                        <i class="fas fa-tag input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Xabar</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <i class="fas fa-comment input-icon"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Xabarni yuborish</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p>+998 90 123 45 67</p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Termiz, O'zbekiston</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name">Ismingiz</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Xabar</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn">Xabarni yuborish</button>
-          </form>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <p>&copy; 2025 Toshmamatov Anvarbek. Barcha huquqlar himoyalangan.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anvarbek</h3>
+                    <p>Zamonaviy veb-saytlar va ilovalarni yaratishga ixtisoslashgan veb-dasturchi va dizayner.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Tez Havolalar</h4>
+                    <ul>
+                        <li><a href="#home">Bosh sahifa</a></li>
+                        <li><a href="#about">Men haqimda</a></li>
+                        <li><a href="#portfolio">Ishlarim</a></li>
+                        <li><a href="#contact">Aloqa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Xizmatlar</h4>
+                    <ul>
+                        <li><a href="#">Veb Dasturlash</a></li>
+                        <li><a href="#">UI/UX Dizayn</a></li>
+                        <li><a href="#">Mobil Ilovalar</a></li>
+                        <li><a href="#">Veb Sifatini Takomillashtirish</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Yangiliklar</h4>
+                    <p>Yangi loyihalar va yangiliklardan xabardor bo'lish uchun obuna bo'ling.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email manzilingiz" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Toshmamatov Anvarbek. Barcha huquqlar himoyalangan.</p>
+                    <div class="footer-links">
+                        <a href="#">Maxfiylik Siyosati</a>
+                        <a href="#">Foydalanish Shartlari</a>
+                        <a href="#">Cookie Siyosati</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
 
+    <!-- Modal for Portfolio Items -->
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="" alt="" id="modalImage">
+                <div class="modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDescription"></p>
+                    <div class="modal-technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" id="modalLink" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Loyihani Ko'rish
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
